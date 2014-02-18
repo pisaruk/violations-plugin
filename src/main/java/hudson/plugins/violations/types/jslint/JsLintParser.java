@@ -21,9 +21,7 @@ public class JsLintParser extends AbstractTypeParser {
      */
     protected void execute() throws IOException, XmlPullParserException {
         
-        // ensure that the top level tag is "jslint"
-        expectNextTag("jslint");
-        getParser().next(); // consume the "jslint" tag
+        getParser().next(); 
         
         // loop thru the child elements, getting the "file" ones
         while (skipToTag("file")) {
